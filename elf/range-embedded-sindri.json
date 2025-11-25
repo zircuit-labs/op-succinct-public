@@ -1,0 +1,8 @@
+{
+  "$schema": "https://sindri.app/api/v1/sindri-manifest-schema.json",
+  "name": "range-elf-embedded",
+  "circuitType": "sp1",
+  "provingScheme": "compressed",
+  "sp1Version": "5.0.0",
+  "elfPath": "range-elf-embedded"
+}

@@ -1,0 +1,27 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            INSERT INTO execution_stats (\n                id,\n                report_execution_duration_ms,\n                total_instruction_count,\n                oracle_verify_instruction_count,\n                derivation_instruction_count,\n                block_execution_instruction_count,\n                blob_verification_instruction_count,\n                cycles_per_block,\n                eth_gas_used,\n                eth_gas_used_per_block,\n                total_sp1_gas,\n                gas_used_per_block,\n                total_nb_transactions,\n                high_memory_threshold\n            ) VALUES (\n                $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14\n            )\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "4fb4a722fb33c204028c8c52372044f0d2b9ca8c84132c4b71797eb9285a9448"
+}

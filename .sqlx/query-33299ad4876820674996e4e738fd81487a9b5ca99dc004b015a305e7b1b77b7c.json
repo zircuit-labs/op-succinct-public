@@ -1,0 +1,70 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            SELECT\n                proof_id,\n                request_created,\n                request_completed,\n                meta as \"meta: _\",\n                proof_input_url,\n                proof_url,\n                status as \"status!: JobStatus\",\n                prover as \"prover!: ProverType\",\n                request_type as \"request_type!: RequestType\"\n            FROM proof_request_client.proof_requests\n            WHERE proof_id = $1\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "proof_id",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "request_created",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 2,
+        "name": "request_completed",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 3,
+        "name": "meta: _",
+        "type_info": "Jsonb"
+      },
+      {
+        "ordinal": 4,
+        "name": "proof_input_url",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "proof_url",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 6,
+        "name": "status!: JobStatus",
+        "type_info": "Int2"
+      },
+      {
+        "ordinal": 7,
+        "name": "prover!: ProverType",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 8,
+        "name": "request_type!: RequestType",
+        "type_info": "Int2"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "33299ad4876820674996e4e738fd81487a9b5ca99dc004b015a305e7b1b77b7c"
+}

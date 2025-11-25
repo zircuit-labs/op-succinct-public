@@ -1,0 +1,94 @@
+[package]
+name = "op-succinct-scripts"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+
+[[bin]]
+name = "fetch-and-save-proof"
+path = "bin/fetch_and_save_proof.rs"
+
+[[bin]]
+name = "config"
+path = "bin/config.rs"
+
+[[bin]]
+name = "config-local"
+path = "bin/config_local.rs"
+
+[[bin]]
+name = "cost-estimator"
+path = "bin/cost_estimator.rs"
+
+[[bin]]
+name = "block-data"
+path = "bin/block_data.rs"
+
+[[bin]]
+name = "fetch-rollup-config"
+path = "bin/fetch_rollup_config.rs"
+
+[[bin]]
+name = "gen-sp1-test-artifacts"
+path = "bin/gen_sp1_test_artifacts.rs"
+
+[[bin]]
+name = "verify-locally"
+path = "bin/verify_locally.rs"
+
+[[bin]]
+name = "sindri-cost-estimator"
+path = "bin/sindri_cost_estimator.rs"
+
+[[bin]]
+name = "zircuit-client"
+path = "bin/zircuit_client.rs"
+
+[[bin]]
+name = "zircuit-client-test-prover"
+path = "bin/zircuit_client_test_prover.rs"
+
+[dependencies]
+
+# workspace
+alloy-primitives.workspace = true
+alloy-sol-types.workspace = true
+alloy-signer-local.workspace = true
+alloy-eips.workspace = true
+bincode.workspace = true
+tokio.workspace = true
+clap.workspace = true
+cargo_metadata.workspace = true
+anyhow.workspace = true
+dotenv.workspace = true
+log.workspace = true
+csv.workspace = true
+serde.workspace = true
+futures.workspace = true
+rayon = "1.10.0"
+serde_json.workspace = true
+tracing.workspace = true
+
+# local
+op-succinct-host-utils.workspace = true
+op-succinct-client-utils.workspace = true
+op-succinct-proof-utils.workspace = true
+op-succinct-elfs.workspace = true
+
+# sindri
+sindri.workspace = true
+
+# sp1
+sp1-sdk.workspace = true
+
+zircuit-client.workspace = true
+
+[build-dependencies]
+op-succinct-build-utils.workspace = true
+
+[features]
+default = ["ethereum"]
+ethereum = ["op-succinct-proof-utils/ethereum"]

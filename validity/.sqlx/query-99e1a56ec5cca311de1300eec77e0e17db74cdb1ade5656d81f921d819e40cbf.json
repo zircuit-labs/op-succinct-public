@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "\n            UPDATE requests SET proof = $1, status = $2, updated_at = NOW() WHERE id = $3 AND (proof_request_id = $4 OR proof_request_id IS NULL)\n            ",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Bytea",
+        "Int2",
+        "Int8",
+        "Bytea"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "99e1a56ec5cca311de1300eec77e0e17db74cdb1ade5656d81f921d819e40cbf"
+}

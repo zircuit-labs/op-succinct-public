@@ -1,0 +1,29 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "SELECT cost_exec_timeout_secs FROM requests WHERE range_vkey_commitment = $1 AND rollup_config_hash = $2 AND status = $3 AND req_type = $4 AND start_block = $5 AND end_block = $6 AND l1_chain_id = $7 AND l2_chain_id = $8",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "cost_exec_timeout_secs",
+        "type_info": "Int8"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Bytea",
+        "Bytea",
+        "Int2",
+        "Int2",
+        "Int8",
+        "Int8",
+        "Int8",
+        "Int8"
+      ]
+    },
+    "nullable": [
+      true
+    ]
+  },
+  "hash": "8aec148e9824b066412ba9644620113da65d90f09273742418abacf0d55fdcb4"
+}
