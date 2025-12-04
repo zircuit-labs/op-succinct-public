@@ -11,8 +11,7 @@ members = [
     "programs/aggregation",
     "scripts/prove",
     "scripts/utils",
-    "validity",
-    "zircuit-client",
+    "slim-proposer",
 ]
 resolver = "2"
 
@@ -50,7 +49,7 @@ reqwest = { version = "0.12.9", features = [
 reqwest-middleware = "0.4.1"
 reqwest-retry = { version = "0.7.0", features = ["tracing"] }
 csv = "1.3.0"
-serde = { version = "=1.0.226", features = ["derive"] }
+serde = { version = "1.0.200", features = ["derive"] }
 serde_json = { version = "1.0.117", default-features = false }
 rkyv = { version = "0.8", features = ["hashbrown-0_15", "std"] }
 hex = "0.4.3"
@@ -98,15 +97,12 @@ op-succinct-client-utils = { path = "utils/client" }
 op-succinct-host-utils = { path = "utils/host" }
 op-succinct-build-utils = { path = "utils/build" }
 op-succinct-elfs = { path = "utils/elfs" }
-op-succinct-validity = { path = "validity" }
 op-succinct-fp = { path = "fault-proof" }
 op-succinct-ethereum-client-utils = { path = "utils/ethereum/client" }
 op-succinct-ethereum-host-utils = { path = "utils/ethereum/host" }
 op-succinct-proof-utils = { path = "utils/proof" }
 op-succinct-signer-utils = { path = "utils/signer" }
 op-succinct-range-utils = { path = "programs/range/utils" }
-
-zircuit-client = { path = "zircuit-client" }
 
 # Alloy (Network)
 alloy-signer-local = { version = "1.0.38", features = ["keystore"] }
@@ -175,7 +171,7 @@ lto = "fat"
 
 [patch.crates-io]
 tiny-keccak = { git = "https://github.com/sp1-patches/tiny-keccak", tag = "patch-2.0.2-sp1-4.0.0" }
-sha2 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", package = "sha2", tag = "patch-sha2-0.10.8-sp1-4.0.0" }
+sha2 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", package = "sha2", tag = "patch-sha2-0.10.9-sp1-4.0.0" }
 substrate-bn = { git = "https://github.com/sp1-patches/bn", tag = "patch-0.6.0-sp1-5.0.0" }
 sha3 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", package = "sha3", tag = "patch-sha3-0.10.8-sp1-4.0.0" }
 p256 = { git = "https://github.com/sp1-patches/elliptic-curves", tag = "patch-p256-13.2-sp1-5.0.0" }

@@ -43,13 +43,6 @@ path = "bin/verify_locally.rs"
 name = "sindri-cost-estimator"
 path = "bin/sindri_cost_estimator.rs"
 
-[[bin]]
-name = "zircuit-client"
-path = "bin/zircuit_client.rs"
-
-[[bin]]
-name = "zircuit-client-test-prover"
-path = "bin/zircuit_client_test_prover.rs"
 
 [dependencies]
 
@@ -70,7 +63,6 @@ serde.workspace = true
 futures.workspace = true
 rayon = "1.10.0"
 serde_json.workspace = true
-tracing.workspace = true
 
 # local
 op-succinct-host-utils.workspace = true
@@ -83,8 +75,6 @@ sindri.workspace = true
 
 # sp1
 sp1-sdk.workspace = true
-
-zircuit-client.workspace = true
 
 [build-dependencies]
 op-succinct-build-utils.workspace = true
